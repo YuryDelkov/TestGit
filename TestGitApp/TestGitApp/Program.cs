@@ -1,2 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TestGitApp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Player player = new Player();
+            Weapon[] weapons = new Weapon[2] {new Pistol(10), new Rifle(50)};
+
+            foreach(var weapon in weapons)
+            {
+                player.InfoWeapon(weapon);
+                player.Fire(weapon);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
