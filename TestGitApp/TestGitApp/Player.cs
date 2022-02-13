@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace TestGitApp
 {
-    public class Player
+    class Player
     {
-        public void Fire(Weapon weapon)
+        public void Fire(IWeapon weapon)
         {
             weapon.Fire();
         }
 
-        public void InfoWeapon(Weapon weapon)
+        public void CheckInfo(IHasInfo hasInfo)
         {
-            weapon.WeaponInfo();
+            hasInfo.ShowInfo();
         }
     }
 }
