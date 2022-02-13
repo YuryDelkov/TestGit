@@ -15,9 +15,14 @@ namespace TestGitApp
 
             foreach(var weapon in weapons)
             {
-                player.InfoWeapon(weapon);
+                player.CheckInfo(weapon);
                 player.Fire(weapon);
             }
+
+            Console.WriteLine();
+
+            Box box = new Box();
+            player.CheckInfo(box);
 
             Console.ReadKey();
         }
